@@ -24,10 +24,11 @@ app.get("/api/v1/portfolio/performance", (req, res) => {
     const currentValue: number = Number(req.query.currentValue);
 
     // Calculate the portfolio performance.
-    const result = calculatePortfolioPerformance(
-        initialInvestment,
-        currentValue
-    );
+    const result: ReturnType<typeof calculatePortfolioPerformance> =
+        calculatePortfolioPerformance(
+            initialInvestment,
+            currentValue
+        );
 
     // Return the calculated portfolio performance.
     res.json(result);
