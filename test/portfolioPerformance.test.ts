@@ -10,10 +10,11 @@ describe("calculatePortfolioPerformance", () => {
         const currentValue: number = 16000;
 
         // Act
-        const result = calculatePortfolioPerformance(
-            initialInvestment,
-            currentValue
-        );
+        const result: ReturnType<typeof calculatePortfolioPerformance> =
+            calculatePortfolioPerformance(
+                initialInvestment,
+                currentValue
+            );
 
         // Assert
         expect(result.initialinvestment).toBe(10000);
@@ -32,10 +33,11 @@ describe("calculatePortfolioPerformance", () => {
         const currentValue: number = 13000;
 
         // Act
-        const result = calculatePortfolioPerformance(
-            initialInvestment,
-            currentValue
-        );
+        const result: ReturnType<typeof calculatePortfolioPerformance> =
+            calculatePortfolioPerformance(
+                initialInvestment,
+                currentValue
+            );
 
         // Assert
         expect(result.profitorLoss).toBe(3000);
@@ -52,10 +54,11 @@ describe("calculatePortfolioPerformance", () => {
         const currentValue: number = 10000.1;
 
         // Act
-        const result = calculatePortfolioPerformance(
-            initialInvestment,
-            currentValue
-        );
+        const result: ReturnType<typeof calculatePortfolioPerformance> =
+            calculatePortfolioPerformance(
+                initialInvestment,
+                currentValue
+            );
 
         // Assert
         expect(result.percentageChange).toBeCloseTo(0.001);
@@ -71,10 +74,11 @@ describe("calculatePortfolioPerformance", () => {
         const currentValue: number = 8999.9;
 
         // Act
-        const result = calculatePortfolioPerformance(
-            initialInvestment,
-            currentValue
-        );
+        const result: ReturnType<typeof calculatePortfolioPerformance> =
+            calculatePortfolioPerformance(
+                initialInvestment,
+                currentValue
+            );
 
         // Assert
         expect(result.percentageChange).toBeLessThan(-10);
